@@ -19,16 +19,24 @@
         margin-top: 5em;
         display: flex;
        flex-wrap: wrap;
+       border-radius: 20px 20px;
     }
 
     p{
-        font-size:4em;
+        font-size:1em;
+        text-align:justify;
     }
 
     h1{
        text-align:center;
        margin-top: 2em;
+       color: #ffffff;
     }
+  body{
+       background-image:url("static/img/fundo.jpg");
+       filter: grayscale(50%);
+       }
+
 
 
 </style>
@@ -43,7 +51,10 @@
           <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">EURO</h5>
-            <p> {{request['EURBRL']['bid']}} </p>
+            <p><strong>Compra</strong>      - R$ {{request['EURBRL']['bid']}}<br>
+               <strong>Venda</strong>       - R$ {{request['EURBRL']['ask']}}<br>
+               <strong>Variação(%)   </strong> {{request['EURBRL']['pctChange']}}
+           </p>
             <a href="#" class="card-link">GO</a>
             </div>
           </div>
@@ -53,7 +64,12 @@
       <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">BITCOIN</h5>
-           <p> {{request['BTCBRL']['bid']}} </p>
+           <p><strong>Compra</strong>      - R$ {{request['BTCBRL']['bid']}}<br>
+              <strong>Venda</strong>       - R$ {{request['BTCBRL']['ask']}}<br>
+              <strong>Variação(%)  </strong>  {{request['BTCBRL']['pctChange']}}
+
+           </p>
+           <p> </p>
              <a type="button" href="#" class="card-link">GO</a>
           </div>
      </div>
@@ -61,7 +77,10 @@
          <div class="card" style="width: 18rem;">
           <div class="card-body">
             <h5 class="card-title">DOLAR</h5>
-           <p> {{request['USDBRL']['bid']}} </p>
+           <p><strong>Compra</strong>      - R$ {{request['USDBRL']['bid']}}<br>
+              <strong>Venda</strong>       - R$ {{request['USDBRL']['ask']}}<br>
+              <strong>Variação(%)  </strong>  {{request['USDBRL']['pctChange']}}
+           </p>
              <a href="#" class="card-link">GO</a>
           </div>
 		</div>

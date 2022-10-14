@@ -18,3 +18,7 @@ async def index():
     return templates.TemplateResponse("index.html", {"request": requisicao.requisicao.json()})
 
 
+if __name__ == '__mail__':
+    app.rum()
+
+
